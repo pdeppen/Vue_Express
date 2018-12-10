@@ -8,8 +8,8 @@ const morgan = require('morgan')
 const db = mysql.createConnection({
     host : 'localhost',
     user : 'root',
-    password : 'password',
-    database : 'project_db'
+    password : 'MySQLpassword17',
+    database : 'vue_express_db'
 });
 
 // connect to db
@@ -25,7 +25,7 @@ const app = express()
 app.use(bodyParser.json())
 app.use(cors())
 app.use(morgan('combined'))
-const port = 80
+const port = 3001
 
 /* default route */
 app.get('/', (req, res) => {
